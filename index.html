@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Grand Hotel Portovenere</title>
+</head>
+<body>
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/a042bccf-35ed-4955-97fa-453031d818f3/webchat/config.js" defer></script>
+    <script>
+      window.botpressWebChat.onEvent(
+        function (event) {
+          if (event.type === 'LIFECYCLE.LOADED') {
+            window.botpressWebChat.sendPayload({ 
+              type: 'trigger' 
+            })
+          }
+        },
+        ['LIFECYCLE.LOADED']
+      )
+    </script>
+</body>
+</html>
