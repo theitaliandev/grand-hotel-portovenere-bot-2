@@ -12,6 +12,7 @@
       window.botpressWebChat.onEvent(
         function (event) {
           if (event.type === 'LIFECYCLE.LOADED') {
+             console.log("Bot loaded") 
             window.botpressWebChat.sendPayload({ 
               type: 'trigger' 
             })
