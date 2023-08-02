@@ -20,6 +20,9 @@
                         }
                     })
                 }
+                if(event.data.type == "MESSAGE.SENT") {
+                    console.log("messaggio inviato")
+                }
             },['LIFECYCLE.LOADED']
         )
     </script>
