@@ -23,10 +23,8 @@
                 }
                 if(event.data.type == "MESSAGE.SENT") {
                     console.log("messaggio inviato")
-                }
-                if(event.data.type == "UI.OPENED") {
-                  messageInput = document.getElementById("input-message")
-                console.log(messageInput)
+                     messageInput = document.getElementById("input-message")
+                    console.log(messageInput)
                 }
             },['LIFECYCLE.LOADED']
         )
