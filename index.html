@@ -11,7 +11,7 @@
     <script>
         window.addEventListener("message", function(event){
                 console.log(event.data.type)
-                if(event.data.type == "LIFECYCLE.READY") {
+                if(event.data.type == "LIFECYCLE.LOADED") {
                     window.botpressWebChat.sendEvent({
                         type: "trigger",
                         channel: "web",
@@ -20,7 +20,7 @@
                         }
                     })
                 }
-            }
+            },['LIFECYCLE.LOADED']
         )
     </script>
 </body>
