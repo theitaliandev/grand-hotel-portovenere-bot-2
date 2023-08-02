@@ -25,8 +25,10 @@
                     console.log("messaggio inviato")
                 }
                 if(event.data.type == "UI.OPENED") {
-                    messageList = document.getElementsByClassName("bpw-msg-list-container")
-                    console.log(messageList)
+                    if(event.data.type == "UI.SET-CLASS"){
+                        messageList = document.getElementsByClassName("bpw-msg-list-container")
+                        console.log(messageList)
+                    }
                 }
             },['LIFECYCLE.LOADED']
         )
