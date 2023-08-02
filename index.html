@@ -9,8 +9,7 @@
     <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
     <script src="https://mediafiles.botpress.cloud/a042bccf-35ed-4955-97fa-453031d818f3/webchat/config.js" defer></script>
     <script>
-        const messageList = document.getElementsByClassName("bpw-msg-list-container")
-        console.log(messageList)
+        let messageList;
         window.addEventListener("message", function(event){
                 console.log(event.data.type)
                 if(event.data.type == "LIFECYCLE.LOADED") {
@@ -24,6 +23,10 @@
                 }
                 if(event.data.type == "MESSAGE.SENT") {
                     console.log("messaggio inviato")
+                }
+                if(event.data.type == "UI.OPENED") {
+                    messageList = document.getElementsByClassName("bpw-msg-list-container")
+                    console.log(messageList)
                 }
             },['LIFECYCLE.LOADED']
         )
