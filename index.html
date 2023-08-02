@@ -10,6 +10,7 @@
     <script src="https://mediafiles.botpress.cloud/a042bccf-35ed-4955-97fa-453031d818f3/webchat/config.js" defer></script>
     <script>
         window.addEventListener("message", function(event){
+                console.log(event.data.type)
                 if(event.data.type == "LIFECYCLE.LOADED") {
                     window.botpressWebChat.sendEvent({
                         type: "trigger",
